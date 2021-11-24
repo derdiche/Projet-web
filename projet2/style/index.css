@@ -1,0 +1,31 @@
+html,
+body {
+  overflow-x: hidden;
+}
+h1,
+button {
+  text-align: center;
+  color: white;
+  margin: 70px;
+}
+body {
+  background: #0064d9;
+}
+p {
+  text-align: start;
+  color: #0064d9;
+}
+form {
+  background: #fefcfe;
+}
+button {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 19px;
+  background-color: #ffa200 !important;
+  color: white !important;
+}
+.btn-group {
+  width: 100%;
+  display: flex;
+}

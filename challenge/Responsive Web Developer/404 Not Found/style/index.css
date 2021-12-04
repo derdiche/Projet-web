@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Montserrat:wght@200&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+header {
+  margin: 3vh 5vw;
+  font-size: 1vmin;
+  font-family: "Inconsolata", monospace;
+}
+section {
+  width: 100vw;
+  height: 85vh;
+  color: #333333;
+}
+section {
+  display: flex;
+}
+img {
+  padding: 15vh 5vw;
+  width: 40vw;
+}
+section div {
+  padding: 15vh 0vw;
+  width: 50vw;
+}
+h2 {
+  font-size: 6vmin;
+}
+p {
+  font-size: 2.5vmin;
+  color: #4f4f4f;
+  margin-top: 3vh;
+  width: 63%;
+}
+button {
+  margin-top: 6vh;
+  font-size: 1.5vmin;
+  height: 7vh;
+  width: 15vw;
+  color: white;
+  background-color: #333333;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer p {
+  font-family: Montserrat;
+  color: #bdbdbd;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 550px) {
+  header {
+    margin: 2vh 5vw;
+    font-size: 3vmin;
+    font-family: "Inconsolata", monospace;
+  }
+  section {
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+  }
+  img {
+    padding: 0;
+    padding-top: 5.5vh;
+    width: 75vw;
+  }
+  section div {
+    padding: 0;
+    padding: 5vh 6vw;
+    width: auto;
+  }
+  h2 {
+    font-size: 11.9vmin;
+  }
+  p {
+    font-size: 5vmin;
+    margin-top: 5vh;
+    width: 100%;
+  }
+  button {
+    font-size: 4vmin;
+    height: 7vh;
+    width: 58vw;
+  }
+  section {
+    height: 83vh;
+  }
+}

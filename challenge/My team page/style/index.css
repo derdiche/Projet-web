@@ -1,0 +1,126 @@
+/************************************************************************************************/
+/*                                           IMPORT POLICE                                      */
+/************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins&family=Space+Mono&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Poppins;
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  align-items: center;
+  height: 20vh;
+  display: flex;
+}
+h1 {
+  width: 50vw;
+  padding-left: 0.9vw;
+  font-family: PT Serif;
+  font-size: 2.1em;
+}
+header div {
+  width: 50vw;
+  padding-left: 1vw;
+}
+h2 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+header div p {
+  font-size: 1em;
+  width: 70%;
+}
+ol {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+li:nth-child(0n + 2),
+li:nth-child(0n + 5) {
+  margin-top: 10vh;
+}
+li div {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+li div img {
+  /* width: 21vw; */
+  height: 25vh;
+}
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer p {
+  font-size: 2em;
+  font-family: Montserrat;
+  color: #bdbdbd;
+}
+@media (max-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  ol {
+    gap: 0 10vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* header {
+    background-color: crimson;
+    padding: 0;
+    margin: 0;
+
+    height: auto;
+    width: auto;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+  }
+  ol {
+    margin-top: vh;
+    gap: 0 10vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  li {
+    margin: 0;
+    padding: 0;
+
+    height: auto;
+    width: auto;
+  }
+  body {
+    width: 100%;
+  }
+  li:nth-child(2n) {
+    padding-top: 10vh;
+  }
+  header div p {
+    width: 100%;
+  }
+  ol {
+    height: auto;
+    width: auto;
+  }
+  li div img {
+    height: auto;
+    width: auto;
+    max-width: 250px;
+
+    object-fit: cover;
+  } */
+}

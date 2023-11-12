@@ -1,0 +1,28 @@
+/* ÔTER LES PAS/MARGES PAR DEFAUT DE TOUS LES ELEMENTS */
+:root {
+  --font-body: "heebo", sans-serif;
+  /* --font-size-xl: clamp(3.5rem, 12vw+1rem, 12rem); */
+  --font-size-xl: 3rem;
+  --font-size-M: 2rem;
+  --font-size: 1rem;
+  --fond: #fdefd7;
+  /* --fond: yellow; */
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  box-shadow: none;
+}
+*::selection {
+  color: none;
+  background: none;
+}
+body {
+  background-color: var(--fond);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

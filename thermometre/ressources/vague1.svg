@@ -1,0 +1,12 @@
+<svg width="352" height="109" viewBox="0 0 352 109" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 100.5C57.6384 107.046 74.8419 108.54 88 108.246C101.158 108.54 118.362 107.046 132 100.5C152 90.9 169.667 87.5 176 87C182.333 87.5 200 90.9 220 100.5C233.638 107.046 250.842 108.54 264 108.246C277.158 108.54 294.362 107.046 308 100.5C328 90.9 345.667 87.5 352 87V0H279H249H176H103H73H0V87C6.33334 87.5 24 90.9 44 100.5Z" fill="#DCE1D4" fill-opacity="0.5">
+<animateTransform attributeName="transform"
+            type="translate" 
+            from="0"
+            to="-176"
+            dur="1s"
+            begin="0s"
+            repeatCount="indefinite"/>
+ </path>
+
+</svg>

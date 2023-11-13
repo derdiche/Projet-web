@@ -6,9 +6,11 @@ function affiche(texte) {
 /********************************************************/
 const tube = document.getElementById("tube");
 const curseur = document.getElementById("cercle");
+const pointeur = document.getElementById("pointeur");
+const degre = document.getElementById("degre");
 const curseurValu = {
-  haut: parseInt(tube.getAttribute("y")),
-  bas: parseInt(curseur.getAttribute("cy")),
+  haut: parseInt(tube.getAttribute("y")), //150
+  bas: parseInt(curseur.getAttribute("cy")), //540
 };
 
 /********************************************************/
@@ -29,7 +31,24 @@ function onDrag({ movementY }) {
   let valeur = parseInt(curseur.getAttribute("cy")) + movementY;
   if (valeur >= curseurValu.haut && valeur <= curseurValu.bas) {
     curseur.setAttribute("cy", valeur);
-  }
+    degre.setAttribute("y", valeur + 10);
+    var pourcentage =
+      100 -
+      parseInt(
+        ((valeur - curseurValu.haut) * 100) /
+          (curseurValu.bas - curseurValu.haut)
+      );
+    degre.textContent = pourcentage + "°";
+    setTimeout(() => {
+      pointeur.setAttribute(
+        "transform",
+        "translate(0," +
+          (pourcentage * (curseurValu.bas - curseurValu.haut)) / -100 +
+          ")"
+      );
+    }, 20);
 
-  affiche(parseInt(curseur.getAttribute("cy")));
+    affiche("mettre a jour la hauteur des vagues");
+    affiche("mettre a jour le pointeur");
+  }
 }

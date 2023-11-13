@@ -70,24 +70,16 @@
       </defs>
 
       <g>
-        <use
-          xlink:href="#tube"
-          class="fond"
-          fill="#C8D9D3"
-          opacity="0.61"
-        ></use>
+        <use xlink:href="#tube" id="font" fill="#C8D9D3" opacity="0.61"></use>
 
-        <g
-          class="cercle"
-          style="cursor: move; touch-action: pan-x; user-select: none"
-        >
-          <circle cx="294" cy="540" r="36" fill="#3A3335"></circle>
+        <g style="cursor: move; touch-action: pan-x; user-select: none">
+          <circle id="cercle" cx="294" cy="540" r="36" fill="#3A3335"></circle>
           <path
             class="pointeur"
             d="M315.5,556.76,299.24,540.5l16.26-16.26,36.26,16.26Z"
             fill="#3A3335"
           ></path>
-          <text class="degre" x="285" y="545">50°</text>
+          <text id="degre" x="300" y="550">50°</text>
         </g>
 
         <g mask="url(#gradMask)">

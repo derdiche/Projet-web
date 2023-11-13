@@ -25,4 +25,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  fill: #fffcf9;
+  font-size: 1.8em;
+  font-family: "din-condensed-web", sans-serif;
+  /* font-family: "filson-soft", sans-serif; */
+  text-anchor: middle;
+  letter-spacing: 1.2px;
+}
+svg {
+  height: 100vh;
 }

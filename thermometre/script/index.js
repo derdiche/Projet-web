@@ -1,19 +1,35 @@
-const curseur = document.getElementById("curseur");
-const slider = document.getElementById("slider");
-let y;
-const deplacer = (e) => {
-  //   console.log("je deplace ");
-  curseur.style.top = `${e.clientY - y}px`;
-  //   curseur.style.transform = `translateY(${e.clientY - y}px)`;
-  requestAnimationFrame(deplacer);
+function affiche(texte) {
+  console.log(texte);
+}
+/********************************************************/
+/*                    Initalisation                     */
+/********************************************************/
+const tube = document.getElementById("tube");
+const curseur = document.getElementById("cercle");
+const curseurValu = {
+  haut: parseInt(tube.getAttribute("y")),
+  bas: parseInt(curseur.getAttribute("cy")),
 };
-curseur.addEventListener("mousedown", (e) => {
-  console.log("je suis entrain dappuyer ");
-  y = e.clientY - curseur.offsetTop;
-  document.addEventListener("mousemove", deplacer);
+
+/********************************************************/
+/*                       curseur                        */
+/********************************************************/
+curseur.addEventListener("mousedown", () => {
+  affiche("appuis");
+  affiche(curseur.getAttribute("cx"));
+  // curseur.setAttribute("cy", curseurValu.haut);
+  document.addEventListener("mousemove", onDrag);
 });
 document.addEventListener("mouseup", () => {
-  console.log(curseur.style.top);
-  document.removeEventListener("mousemove", deplacer);
+  affiche("retire");
+  document.removeEventListener("mousemove", onDrag);
 });
-requestAnimationFrame(deplacer);
+function onDrag({ movementY }) {
+  // affiche("deplace");
+  let valeur = parseInt(curseur.getAttribute("cy")) + movementY;
+  if (valeur >= curseurValu.haut && valeur <= curseurValu.bas) {
+    curseur.setAttribute("cy", valeur);
+  }
+
+  affiche(parseInt(curseur.getAttribute("cy")));
+}

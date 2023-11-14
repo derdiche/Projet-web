@@ -48,24 +48,36 @@
         ></path>
         <mask id="gradMask">
           <use
+            id="vague1"
             xlink:href="#liquide"
             class="liquide"
             x="0"
             fill="#FCEFD6"
-            style=""
-            data-svg-origin="357 552"
             transform="matrix(1,0,0,1,-69.42857142857812,-212.8)"
-          ></use>
+          >
+            <animate
+              attributeName="x"
+              dur="1.5s"
+              repeatCount="indefinite"
+              values="-240;0"
+            />
+          </use>
           <use
+            id="vague2"
             xlink:href="#liquide"
             class="liquide"
             x="0"
             fill="#EEE"
             opacity="0.7"
-            style=""
-            data-svg-origin="357 552"
             transform="matrix(1,0,0,1,-155.142857142859,-212.8)"
-          ></use>
+          >
+            <animate
+              attributeName="x"
+              dur="1s"
+              repeatCount="indefinite"
+              values="40;-160"
+            />
+          </use>
         </mask>
       </defs>
 

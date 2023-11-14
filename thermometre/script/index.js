@@ -13,6 +13,8 @@ const curseurValu = {
   haut: parseInt(tube.getAttribute("y")), //150
   bas: parseInt(curseur.getAttribute("cy")), //540
 };
+const vague = document.getElementById("vague2");
+affiche(typeof vague);
 
 /********************************************************/
 /*                       curseur                        */

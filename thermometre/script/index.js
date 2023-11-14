@@ -8,6 +8,7 @@ const tube = document.getElementById("tube");
 const curseur = document.getElementById("cercle");
 const pointeur = document.getElementById("pointeur");
 const degre = document.getElementById("degre");
+const liquide = document.getElementById("liquide");
 const curseurValu = {
   haut: parseInt(tube.getAttribute("y")), //150
   bas: parseInt(curseur.getAttribute("cy")), //540
@@ -19,7 +20,6 @@ const curseurValu = {
 curseur.addEventListener("mousedown", () => {
   affiche("appuis");
   affiche(curseur.getAttribute("cx"));
-  // curseur.setAttribute("cy", curseurValu.haut);
   document.addEventListener("mousemove", onDrag);
 });
 document.addEventListener("mouseup", () => {
@@ -27,7 +27,6 @@ document.addEventListener("mouseup", () => {
   document.removeEventListener("mousemove", onDrag);
 });
 function onDrag({ movementY }) {
-  // affiche("deplace");
   let valeur = parseInt(curseur.getAttribute("cy")) + movementY;
   if (valeur >= curseurValu.haut && valeur <= curseurValu.bas) {
     curseur.setAttribute("cy", valeur);
@@ -39,16 +38,31 @@ function onDrag({ movementY }) {
           (curseurValu.bas - curseurValu.haut)
       );
     degre.textContent = pourcentage + "°";
-    setTimeout(() => {
-      pointeur.setAttribute(
-        "transform",
-        "translate(0," +
-          (pourcentage * (curseurValu.bas - curseurValu.haut)) / -100 +
-          ")"
-      );
-    }, 20);
-
-    affiche("mettre a jour la hauteur des vagues");
-    affiche("mettre a jour le pointeur");
+    deplacePointeur(pourcentage);
+    deplaceLiquide(pourcentage);
   }
+}
+
+function deplacePointeur(pourcentage) {
+  affiche("mettre a jour le pointeur");
+  setTimeout(() => {
+    pointeur.setAttribute(
+      "transform",
+      "translate(0," +
+        (pourcentage * (curseurValu.bas - curseurValu.haut)) / -100 +
+        ")"
+    );
+  }, 20);
+}
+function deplaceLiquide(pourcentage) {
+  pourcentage = pourcentage - 50;
+  setTimeout(() => {
+    affiche("mettre a jour la hauteur des vagues");
+    liquide.setAttribute(
+      "transform",
+      "translate(0," +
+        (pourcentage * (curseurValu.bas + 32 - curseurValu.haut)) / -100 +
+        ")"
+    );
+  }, 64);
 }
